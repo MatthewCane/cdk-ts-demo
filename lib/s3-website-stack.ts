@@ -18,7 +18,7 @@ export class S3WebsiteStack extends cdk.Stack {
     });
 
     new BucketDeployment(this, "Deployment", {
-      sources: [Source.asset("../public")],
+      sources: [Source.asset("public")],
       destinationBucket: bucket,
     });
   }
